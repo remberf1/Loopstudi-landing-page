@@ -306,7 +306,7 @@ a {
     width: 100%;
   }
   .hero {
-    background-image: url(./images//desktop/image-hero.jpg);
+    background-image: url(./images/desktop/image-hero.jpg);
   }
   .hero__title {
     font-size: 5rem;
