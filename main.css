@@ -9,13 +9,6 @@ html, body {
   box-sizing: inherit;
 }
 
-h1 {
-  font-size: 3.815rem;
-  font-family: "Alata";
-  font-weight: 400;
-  line-height: 1.4;
-}
-
 main {
   padding: 0;
   margin: 0;
@@ -284,6 +277,25 @@ a {
   height: 24px;
 }
 
+.links--hover a, .social--hover li {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  color: hsl(0, 0%, 100%);
+}
+.links--hover a::after, .social--hover li::after {
+  content: "";
+  position: absolute;
+  top: 1.75em;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: hsl(0, 0%, 100%);
+  transition: width 0.3s ease-in-out;
+}
+.links--hover a:hover::after, .social--hover li:hover::after {
+  width: 100%;
+}
+
 .attribution {
   color: gray;
 }
@@ -349,6 +361,38 @@ a {
     display: flex;
     gap: 2rem;
   }
+  .nav__links--hover a {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    color: hsl(0, 0%, 100%);
+  }
+  .nav__links--hover a::after {
+    content: "";
+    position: absolute;
+    top: 1.75em;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: hsl(0, 0%, 100%);
+    transition: width 0.3s ease-in-out;
+  }
+  .nav__links--hover a:hover::after {
+    width: 100%;
+  }
+  .creations__cards--hover .creations__card {
+    cursor: default;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .creations__cards--hover .creations__card:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .creations__cards--hover .creations__card:hover h3 {
+    color: hsl(0, 0%, 0%);
+  }
+  .creations__cards--hover .creations__card:hover::before {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
   .creations__header {
     display: flex;
     width: 100%;
@@ -405,6 +449,10 @@ a {
   }
   .footer__social p {
     margin: 0;
+  }
+  .footer__info,
+  .footer__social {
+    gap: 1em;
   }
 }
 
